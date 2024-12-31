@@ -1,0 +1,16 @@
+#Edit or Create the Configuration File: C:\ProgramData\Datadog\conf.d\snmp.d\conf.yaml
+#Example conf.yaml for SNMP v2:
+
+init_config:
+  profiles:
+    cisco-3650: path\to\cisco-3650-profile.yaml
+
+instances:
+  - ip_address: <DEVICE_IP>
+    community_string: public
+    port: 161
+    version: 2
+    profile: cisco-3650
+    tags:
+      - location:plant
+      - device:cisco3650
